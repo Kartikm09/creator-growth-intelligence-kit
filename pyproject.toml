@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "creator-growth-intelligence-kit"
+version = "0.1.0"
+description = "Analyze creator video outliers and generate next-topic, repurposing, and localization briefs."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Kartik Mishra" }]
+license = { text = "MIT" }
+keywords = ["creator-analytics", "social-media-automation", "viral-content", "ai-content", "python"]
+
+[project.scripts]
+creator-growth = "creator_growth.cli:main"
+
