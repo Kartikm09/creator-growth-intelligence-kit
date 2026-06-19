@@ -16,6 +16,16 @@ JSON output:
 PYTHONPATH=src python3 -m creator_growth.cli analyze examples/videos.csv --format json
 ```
 
+Optional live Kimi/ZenMux creator sprint:
+
+```bash
+export ZENMUX_API_KEY="your_api_key_here"
+export ZENMUX_MODEL="moonshotai/kimi-k2.7-code-free"
+PYTHONPATH=src python3 -m creator_growth.cli analyze examples/videos.csv --llm
+```
+
+The API key is read from the environment and should never be committed. Without `--llm`, the repo runs fully offline.
+
 Run tests:
 
 ```bash
@@ -30,6 +40,7 @@ PYTHONPATH=src python3 -m unittest discover -s tests
 - next-topic recommendations
 - multilingual repurpose plan
 - review notes for human content planning
+- optional Kimi/ZenMux 7-day content sprint when `--llm` is enabled
 
 ## Portfolio Signal
 
@@ -41,4 +52,3 @@ This repo supports work around:
 - AI content operations
 - multilingual content growth
 - Python data tooling
-
